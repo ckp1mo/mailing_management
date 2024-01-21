@@ -1,0 +1,6 @@
+Django==4.2
+Pillow
+psycopg2
+python-dotenv
+ipython
+apscheduler

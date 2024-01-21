@@ -1,0 +1,45 @@
+{% extends 'main_app/base.html' %}
+
+{% block title %} Создать рассылку {% endblock %}
+
+
+{% block content %}
+{% if object %}
+<h1 class="text-center">Изменить рассылку</h1>
+{% else %}
+<h1 class="text-center">Создать рассылку</h1>
+{% endif %}
+<div class="col-12">
+    <div class="text-center row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <form class="pt-4" method="post">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Настройки рассылки
+                </h3>
+            </div>
+            <div class="card-body">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <a href="{% url 'main_app:create_client' %}" class="mt-2 btn btn-light fw-bold border-white bg-white">Добавить
+                    клиента</a>
+                <a href="{% url 'main_app:create_message' %}" class="mt-2 btn btn-light fw-bold border-white bg-white">Добавить
+                    письмо</a>
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="mt-2 btn btn-light fw-bold border-white bg-white">
+                    {% if object %}
+                    Сохранить
+                    {% else %}
+                    Создать
+                    {% endif %}
+                </button>
+            </div>
+        </div>
+    </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

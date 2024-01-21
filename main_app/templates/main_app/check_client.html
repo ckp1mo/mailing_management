@@ -1,0 +1,12 @@
+{% extends 'main_app/base.html' %}
+
+{% block title %} Главная {% endblock %}
+
+
+{% block content %}
+<h1>Оупс..</h1>
+<p class="lead">Пока что нет клиентов для рассылки, добавьте клиента и вернемся на создание рассылки.</p>
+<p class="lead">
+    <a href="{% url 'main_app:add_client' %}" class="btn btn-lg btn-light fw-bold border-white bg-white">Добавить клиента</a>
+</p>
+{% endblock %}

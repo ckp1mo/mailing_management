@@ -1,0 +1,26 @@
+<{% extends 'main_app/base.html' %}
+
+{% block title %} Ваш клиент {% endblock %}
+
+
+{% block content %}
+<h1>Ваш клиент</h1>
+<p class="lead">
+<div class="card">
+    <div class="card-header">
+        <h5>Имя: {{object.name}}</h5>
+    </div>
+    <div class="card-body">
+        <p>Контакты: {{object.email}}</p>
+    </div>
+    <div class="card-footer">
+        <p>Кем добавлен: {{object.owner}}</p>
+    </div>
+</div>
+<a href="{% url 'main_app:update_client' object.pk %}"
+   class="mt-2 btn btn-light fw-bold border-white bg-white">Изменить</a>
+<a href="{% url 'main_app:delete_client' object.pk %}"
+   class="mt-2 btn btn-light fw-bold border-white bg-white">Удалить</a>
+</p>
+<a href="{% url 'main_app:list_client' %}" class="mt-5 btn btn-light fw-bold border-white bg-white">Назад</a>
+{% endblock %}

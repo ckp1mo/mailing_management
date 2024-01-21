@@ -1,0 +1,37 @@
+{% extends 'main_app/base.html' %}
+
+{% block title %} Главная {% endblock %}
+
+
+{% block content %}
+<div class="text-center" xmlns="http://www.w3.org/1999/html">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-6">
+                <h1>Ваш почтальон</h1>
+                <p class="lead">Доставляйте важные новости своим клиентам в автоматическом режиме. Доверьте эту работу
+                    нам.
+                    Мы что-то в этом деле понимаем!</p>
+                <div class="card pt-2">
+                    <p>Всего рассылок на портале: {{ mailing }}</p>
+                    <p>Активных рассылок: {{ is_active }}</p>
+                    <p>Уникальные клиенты: {{ unique_client }}</p>
+                    <p>Успешных рассылок: {{ count_mailing }}</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <h4 class="text-center">Случайные статьи</h4>
+                {% for article in articles %}
+                <div class="card mt-4">
+                    <div class="card-header">
+                        {{ article.title | truncatechars:30}}
+                    </div>
+                        {{ article.body | truncatechars:150 }}
+                </div>
+                    <a href="{% url 'blog:detail_blog' article.pk %}" class="mt-1 btn btn-light fw-bold border-white bg-white">Смотреть</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

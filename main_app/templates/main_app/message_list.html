@@ -1,0 +1,35 @@
+{% extends 'main_app/base.html' %}
+
+{% block title %} Мои сообщения {% endblock %}
+
+
+{% block content %}
+<p class="lead">
+<div class="text-center">
+    <h1 class=" text-center">Мои сообщения</h1>
+    <a href="{% url 'main_app:create_message' %}" class="mb-5 btn btn-light fw-bold border-white bg-white">Добавить
+        сообщение</a>
+</div>
+<div class="text-center col-12">
+    <div class="row">
+        <div class="col-2">
+
+        </div>
+        <div class="col-8">
+            {% for object in object_list %}
+            <div class="mt-4 card">
+                <div class="card-header">
+                    <h5>{{ object.title }}</h5>
+                </div>
+                <div class="card-body">
+                    <p>{{ object.body | truncatechars:100 }}</p>
+                </div>
+            </div>
+            <a href="{% url 'main_app:detail_message' object.pk %}"
+               class="mt-2 btn btn-light fw-bold border-white bg-white">Смотреть</a>
+            {% endfor %}
+        </div>
+    </div>
+    <a href="{% url 'users:profile' %}" class="mt-5 btn btn-light fw-bold border-white bg-white">Назад</a>
+</div>
+{% endblock %}

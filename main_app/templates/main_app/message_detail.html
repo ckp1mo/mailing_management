@@ -1,0 +1,28 @@
+{% extends 'main_app/base.html' %}
+
+{% block title %} Рассылки {% endblock %}
+
+
+{% block content %}
+<h1>Ваши сообщения</h1>
+<p class="lead">
+<div class="card">
+    <div class="card-header">
+        <h5>Тема: {{object.title}}</h5>
+    </div>
+    <div class="card-body">
+        <p>Содержание сообщения: {{object.body}}</p>
+    </div>
+    <div class="card-footer">
+        <p>Автор рассылки: {{object.owner}}</p>
+    </div>
+</div>
+{% if not perms.users.block_user %}
+    <a href="{% url 'main_app:update_message' object.pk %}"
+       class="mt-2 btn btn-light fw-bold border-white bg-white">Изменить</a>
+    <a href="{% url 'main_app:delete_message' object.pk %}"
+       class="mt-2 btn btn-light fw-bold border-white bg-white">Удалить</a>
+{% endif %}
+</p>
+<a href="{% url 'main_app:list_message' %}" class="mt-5 btn btn-light fw-bold border-white bg-white">Назад</a>
+{% endblock %}

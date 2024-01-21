@@ -1,0 +1,21 @@
+<div>
+    <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="{% url 'main_app:index' %}">Главная</a>
+        <a class="nav-link fw-bold py-1 px-0" href="{% url 'main_app:list_view' %}">Рассылки</a>
+        <a class="nav-link fw-bold py-1 px-0" href="{% url 'blog:list_blog' %}">Блог</a>
+        {% if not user.is_authenticated %}
+        <a class="nav-link fw-bold py-1 px-0" href="{% url 'users:login' %}">Войти</a>
+        <a class="nav-link fw-bold py-1 px-0" href="{% url 'users:register' %}">Регистрация</a>
+        {% else %}
+        <a class="nav-link fw-bold py-1 px-0" href="{% url 'users:profile' %}">Профиль</a>
+        <a class="nav-link fw-bold py-1 px-0" href="{% url 'users:logout' %}">Выйти</a>
+        {% endif %}
+        {% if perms.users.block_user %}
+            <a class="nav-link fw-bold py-1 px-0" href="{% url 'users:list_user' %}">Пользователи</a>
+        {% endif %}
+    </nav>
+    <h3 class="float-md-start mb-0">Привет!</h3>
+    <br>
+    <br>
+    <p class="float-left">{{ user.email }}</p>
+</div>

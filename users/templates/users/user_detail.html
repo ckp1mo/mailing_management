@@ -1,0 +1,50 @@
+{% extends 'main_app/base.html' %}
+
+{% block title %} Мой профиль {% endblock %}
+
+{% block content %}
+<div class="col-12">
+    <div class="row">
+        <div class="col-6">
+            <h1 class="text-center">Мой профиль</h1>
+            <div class="mb-2 card">
+                <div class="card-header">
+                    <img class="img-fluid img-thumbnail rounded float-right w-50"
+                         src="/media/{{user.avatar}}" alt="">
+                </div>
+                <div class="card-body">
+                    Почта: {{user.email}}<br>
+                    Имя: {{ user.first_name }}<br>
+                    Фамилия: {{ user.last_name }}<br>
+                    Страна: {{ user.country }}<br>
+                    Город: {{ user.city }}<br>
+                </div>
+            </div>
+            <a href="{% url 'users:edit_profile' %}"
+               class="mb-4 btn btn-light fw-bold border-white bg-white">Изменить</a>
+        </div>
+        <div class="col-6">
+            <h1 class="text-center">Мои рассылки</h1>
+            <div class="text-center mb-2 card">
+                <div class="card-body">
+                    <a href="{% url 'main_app:list_client' %}" class="btn btn-light fw-bold border-dark bg-white">Клиенты</a>
+                </div>
+            </div>
+            <div class="text-center mb-2 card">
+                <div class="card-body">
+                    <a href="{% url 'main_app:list_message' %}" class="btn btn-light fw-bold border-dark bg-white">Сообщения</a>
+                </div>
+            </div>
+            <div class="text-center mb-2 card">
+                <div class="card-body">
+                    <a href="{% url 'main_app:list_view' %}" class="btn btn-light fw-bold border-dark bg-white">Рассылки</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-center">
+    <a href="{% url 'main_app:index' %}" class="mt-5 btn btn-light fw-bold border-white bg-white">Назад</a>
+</div>
+{% endblock %}
+

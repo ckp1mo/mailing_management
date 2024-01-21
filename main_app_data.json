@@ -1,0 +1,794 @@
+[
+  {
+    "model": "main_app.client",
+    "pk": 5,
+    "fields": {
+      "email": "nekonea@gmail.com",
+      "name": "Александр",
+      "comment": null,
+      "owner": 1
+    }
+  },
+  {
+    "model": "main_app.client",
+    "pk": 6,
+    "fields": {
+      "email": "ickp1mo@gmail.com",
+      "name": "ckp1mo",
+      "comment": null,
+      "owner": 1
+    }
+  },
+  {
+    "model": "main_app.client",
+    "pk": 7,
+    "fields": {
+      "email": "zaramot@bk.ru",
+      "name": "ckp1mo",
+      "comment": null,
+      "owner": 2
+    }
+  },
+  {
+    "model": "main_app.client",
+    "pk": 8,
+    "fields": {
+      "email": "testov223@mail.com",
+      "name": "крипта",
+      "comment": null,
+      "owner": 2
+    }
+  },
+  {
+    "model": "main_app.message",
+    "pk": 1,
+    "fields": {
+      "title": "rrrrrr",
+      "body": "rrrrrrrr",
+      "owner": 1
+    }
+  },
+  {
+    "model": "main_app.message",
+    "pk": 2,
+    "fields": {
+      "title": "Все отлично",
+      "body": "Хотя на самом деле ни%уя себе не так.",
+      "owner": 2
+    }
+  },
+  {
+    "model": "main_app.mailing",
+    "pk": 3,
+    "fields": {
+      "start_time": "12:00:00",
+      "end_time": "17:00:00",
+      "frequency": "Раз в день",
+      "status": "Создана",
+      "is_active": true,
+      "owner": 1,
+      "message": 1,
+      "clients": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "main_app.mailing",
+    "pk": 4,
+    "fields": {
+      "start_time": "12:00:00",
+      "end_time": "17:00:00",
+      "frequency": "Раз в день",
+      "status": "Создана",
+      "is_active": true,
+      "owner": 2,
+      "message": 2,
+      "clients": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "main_app.mailing",
+    "pk": 5,
+    "fields": {
+      "start_time": "12:00:00",
+      "end_time": "20:00:00",
+      "frequency": "Раз в день",
+      "status": "Создана",
+      "is_active": false,
+      "owner": 2,
+      "message": 1,
+      "clients": [
+        7,
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 1,
+    "fields": {
+      "time": "2024-01-20T21:39:46.384Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 1,
+      "mailing": 3,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 2,
+    "fields": {
+      "time": "2024-01-20T21:39:46.388Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 4,
+      "client": "test@mail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 3,
+    "fields": {
+      "time": "2024-01-21T13:06:36.314Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 4,
+      "client": "test@mail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 4,
+    "fields": {
+      "time": "2024-01-21T13:06:36.318Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 1,
+      "mailing": 3,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 5,
+    "fields": {
+      "time": "2024-01-21T13:16:56.392Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 4,
+      "client": "test@mail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 6,
+    "fields": {
+      "time": "2024-01-21T13:16:56.395Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 1,
+      "mailing": 3,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 7,
+    "fields": {
+      "time": "2024-01-21T13:27:08.551Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 4,
+      "client": "test@mail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 8,
+    "fields": {
+      "time": "2024-01-21T13:27:08.555Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 1,
+      "mailing": 3,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 9,
+    "fields": {
+      "time": "2024-01-21T13:37:27.918Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 4,
+      "client": "test@mail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 10,
+    "fields": {
+      "time": "2024-01-21T13:37:27.921Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 1,
+      "mailing": 3,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 11,
+    "fields": {
+      "time": "2024-01-21T13:52:35.305Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 4,
+      "client": "nekonea@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 12,
+    "fields": {
+      "time": "2024-01-21T13:52:35.308Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 1,
+      "mailing": 3,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 13,
+    "fields": {
+      "time": "2024-01-21T14:46:23.533Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 14,
+    "fields": {
+      "time": "2024-01-21T14:48:20.734Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 15,
+    "fields": {
+      "time": "2024-01-21T14:49:26.681Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 16,
+    "fields": {
+      "time": "2024-01-21T14:49:26.684Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 17,
+    "fields": {
+      "time": "2024-01-21T14:49:26.685Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "nekonea@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 18,
+    "fields": {
+      "time": "2024-01-21T14:49:26.686Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "testov223@mail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 19,
+    "fields": {
+      "time": "2024-01-21T14:50:46.095Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 20,
+    "fields": {
+      "time": "2024-01-21T14:50:46.999Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 21,
+    "fields": {
+      "time": "2024-01-21T14:50:47.530Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "nekonea@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 22,
+    "fields": {
+      "time": "2024-01-21T15:00:57.128Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 23,
+    "fields": {
+      "time": "2024-01-21T15:00:57.130Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 24,
+    "fields": {
+      "time": "2024-01-21T15:00:57.131Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "nekonea@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 25,
+    "fields": {
+      "time": "2024-01-21T15:11:06.945Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 26,
+    "fields": {
+      "time": "2024-01-21T15:11:06.947Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 27,
+    "fields": {
+      "time": "2024-01-21T15:11:06.949Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "nekonea@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 28,
+    "fields": {
+      "time": "2024-01-21T15:21:35.780Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 29,
+    "fields": {
+      "time": "2024-01-21T15:21:35.782Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 30,
+    "fields": {
+      "time": "2024-01-21T15:21:35.784Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "nekonea@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 31,
+    "fields": {
+      "time": "2024-01-21T15:31:53.022Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 32,
+    "fields": {
+      "time": "2024-01-21T15:31:53.024Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 33,
+    "fields": {
+      "time": "2024-01-21T15:31:53.025Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "nekonea@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 34,
+    "fields": {
+      "time": "2024-01-21T15:42:08.474Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 35,
+    "fields": {
+      "time": "2024-01-21T15:42:08.475Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 36,
+    "fields": {
+      "time": "2024-01-21T15:42:08.477Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "nekonea@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 37,
+    "fields": {
+      "time": "2024-01-21T15:52:38.467Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 38,
+    "fields": {
+      "time": "2024-01-21T15:52:38.469Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 39,
+    "fields": {
+      "time": "2024-01-21T15:52:38.470Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "nekonea@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 40,
+    "fields": {
+      "time": "2024-01-21T16:03:08.475Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 41,
+    "fields": {
+      "time": "2024-01-21T16:03:08.476Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 42,
+    "fields": {
+      "time": "2024-01-21T16:03:08.478Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "nekonea@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 43,
+    "fields": {
+      "time": "2024-01-21T16:13:38.475Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 44,
+    "fields": {
+      "time": "2024-01-21T16:13:38.476Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 45,
+    "fields": {
+      "time": "2024-01-21T16:13:38.477Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "nekonea@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 46,
+    "fields": {
+      "time": "2024-01-21T16:24:08.467Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 47,
+    "fields": {
+      "time": "2024-01-21T16:24:08.469Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 48,
+    "fields": {
+      "time": "2024-01-21T16:24:08.470Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "nekonea@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 49,
+    "fields": {
+      "time": "2024-01-21T16:34:38.471Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 50,
+    "fields": {
+      "time": "2024-01-21T16:34:38.473Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 51,
+    "fields": {
+      "time": "2024-01-21T16:34:38.474Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "nekonea@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 52,
+    "fields": {
+      "time": "2024-01-21T16:44:56.433Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 53,
+    "fields": {
+      "time": "2024-01-21T16:44:56.435Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 54,
+    "fields": {
+      "time": "2024-01-21T16:44:56.436Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "nekonea@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 55,
+    "fields": {
+      "time": "2024-01-21T16:55:49.301Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "zaramot@bk.ru"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 56,
+    "fields": {
+      "time": "2024-01-21T16:55:49.303Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "ickp1mo@gmail.com"
+    }
+  },
+  {
+    "model": "main_app.log",
+    "pk": 57,
+    "fields": {
+      "time": "2024-01-21T16:55:49.304Z",
+      "status": "Success",
+      "server_response": "",
+      "owner": 2,
+      "mailing": 5,
+      "client": "nekonea@gmail.com"
+    }
+  }
+]

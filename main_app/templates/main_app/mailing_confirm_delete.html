@@ -1,0 +1,19 @@
+{% extends 'main_app/base.html' %}
+
+{% block title %} Создать рассылку {% endblock %}
+
+
+{% block content %}
+<h1 class="text-center">Удалить рассылку</h1>
+<div class="col-12 text-center">
+    <form class="row pt-4" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="center">
+            <button type="submit" class="mt-2 btn btn-light fw-bold border-white bg-white">
+            Удалить
+        </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'main_app/base.html' %}
+
+{% block title %} Верификация {% endblock %}
+
+
+{% block content %}
+<h1>Верификация</h1>
+<div class="col-12">
+    <form class="row pt-4" method="post">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Верификация аккаунта
+                </h3>
+            </div>
+            <div class="card-body">
+                {% csrf_token %}
+                {% csrf_token %}
+                <input type="text" name="verify_code" class="form-control" id="verify_code" required>
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="mt-2 btn btn-light fw-bold border-white bg-white">
+                    Подтвердить
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

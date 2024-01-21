@@ -1,0 +1,39 @@
+{% extends 'main_app/base.html' %}
+
+{% block title %} Ваши рассылки {% endblock %}
+
+
+{% block content %}
+<h1>Ваши рассылки</h1>
+<p class="lead">
+    <div class="card">
+        <div class="card-body">
+            <p>Тема рассылки: {{object.message.title}}</p>
+            <p>Время старта рассылки: {{object.start_time}}</p>
+            <p>Время окончания рассылки: {{object.end_time}}</p>
+            <p>Периодичность рассылки: {{object.frequency}}</p>
+            <p>Клиенты:
+                {% for client in clients %}
+                {{ client.email }},
+                {% endfor %}
+            {%if object.is_active %}
+                <p>Статус рассылки: Активна</p>
+            {% else %}
+                <p>Статус рассылки: Неактивна</p>
+            {% endif %}
+            <p>Автор рассылки: {{object.owner}}</p>
+        </div>
+    </div>
+    {% if perms.users.block_user %}
+        {% if object.is_active %}
+        <a href="{% url 'main_app:change_active' object.pk %}" class="mt-2 btn btn-light fw-bold border-white bg-white">Выключить</a>
+        {% else %}
+        <a href="{% url 'main_app:change_active' object.pk %}" class="mt-2 btn btn-light fw-bold border-white bg-white">Включить</a>
+        {% endif %}
+    {% else %}
+    <a href="{% url 'main_app:update_view' object.pk %}" class="mt-2 btn btn-light fw-bold border-white bg-white">Изменить</a>
+    <a href="{% url 'main_app:delete_view' object.pk %}" class="mt-2 btn btn-light fw-bold border-white bg-white">Удалить</a>
+    {% endif %}
+</p>
+<a href="{% url 'main_app:list_view' %}" class="mt-5 btn btn-light fw-bold border-white bg-white">Назад</a>
+{% endblock %}
