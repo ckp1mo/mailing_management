@@ -3,4 +3,4 @@ Pillow
 psycopg2
 python-dotenv
 ipython
-apscheduler
+django-apscheduler
