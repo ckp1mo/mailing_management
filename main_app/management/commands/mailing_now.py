@@ -8,7 +8,6 @@ class Command(BaseCommand):
         mailing = Mailing.objects.filter(is_active=True)
         for mail in mailing:
             clients = mail.clients.all()
-            print(clients)
             message = Message.objects.get(pk=mail.message_id)
             if clients is None:
                 log = Log.objects.create(
