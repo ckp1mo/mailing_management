@@ -1,7 +1,5 @@
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect, get_object_or_404
-from apscheduler.schedulers.background import BackgroundScheduler
-from django.core.management import call_command
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DetailView, DeleteView
 from main_app.forms import MailingForm, ClientForm, MessageForm
@@ -23,15 +21,6 @@ def index(request):
         'count_mailing': count_mailing,
     }
     return render(request, 'main_app/home.html', context)
-
-
-def mailing_start():
-    return call_command('mailing_start')
-
-
-scheduler = BackgroundScheduler()
-scheduler.add_job(mailing_start, 'interval', seconds=30)
-scheduler.start()
 
 
 class MailingListView(LoginRequiredMixin, ListView):
